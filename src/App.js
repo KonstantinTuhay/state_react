@@ -1,4 +1,104 @@
-import React, { useState } from "react";
+import React from "react";
+
+// 4.
+class Counter extends React.Component {
+  constructor() {
+    super();
+    this.state = { color: "violet" };
+  }
+
+  changeColor = () => {
+    this.setState((state) =>
+      this.state.color === "violet"
+        ? (state = { color: "red" })
+        : (state = { color: "violet" })
+    );
+  };
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.changeColor}>change color</button>
+        <p style={this.state}>fdsfs dsfdsfsd efsdfsfsdewrew</p>
+      </div>
+    );
+  }
+}
+
+export default Counter;
+
+// 3.
+// class Counter extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = { str: "" };
+//   }
+
+//   handleChange = (event) => {
+//     this.setState({ str: event.target.value });
+//   };
+
+//   render() {
+//     return (
+//       <div>
+//         <input
+//           type="text"
+//           onChange={this.handleChange}
+//           value={this.state.str}
+//         />
+//         <p>{this.state.str}</p>
+//       </div>
+//     );
+//   }
+// }
+
+// export default Counter;
+
+// 2.
+// class Counter extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = { bool: false };
+//   }
+
+//   handleText = () => {
+//     this.setState((state) => ({ bool: !state.bool }));
+//   };
+
+//   render() {
+//     return (
+//       <div>
+//         <button onClick={this.handleText}>click</button>
+//         {this.state.bool && <p>dfsdfsfdfsd</p>}
+//       </div>
+//     );
+//   }
+// }
+
+// export default Counter;
+
+// 1.
+// class Counter extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = { count: 0 };
+//   }
+
+//   increment = () => {
+//     this.setState((state) => ({ count: state.count + 1 }));
+//   };
+
+//   render() {
+//     return (
+//       <div>
+//         <button onClick={this.increment}>click</button>
+//         <p>{this.state.count}</p>
+//       </div>
+//     );
+//   }
+// }
+
+// export default Counter;
 
 // 4.
 // const Example = () => {
@@ -72,4 +172,4 @@ import React, { useState } from "react";
 //   );
 // };
 
-export default Example;
+// export default Example;
