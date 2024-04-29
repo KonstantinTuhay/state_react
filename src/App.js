@@ -8,11 +8,9 @@ class Counter extends React.Component {
   }
 
   changeColor = () => {
-    this.setState((state) =>
-      this.state.color === "violet"
-        ? (state = { color: "red" })
-        : (state = { color: "violet" })
-    );
+    this.setState((state) => ({
+      color: state.color === "violet" ? "red" : "violet",
+    }));
   };
 
   render() {
@@ -25,7 +23,7 @@ class Counter extends React.Component {
   }
 }
 
-export default Counter;
+// export default Counter;
 
 // 3.
 // class Counter extends React.Component {
@@ -39,14 +37,11 @@ export default Counter;
 //   };
 
 //   render() {
+//     const { str } = this.state;
 //     return (
 //       <div>
-//         <input
-//           type="text"
-//           onChange={this.handleChange}
-//           value={this.state.str}
-//         />
-//         <p>{this.state.str}</p>
+//         <input type="text" onChange={this.handleChange} value={str} />
+//         <p>{str}</p>
 //       </div>
 //     );
 //   }
