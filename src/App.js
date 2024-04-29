@@ -134,20 +134,20 @@ class Counter extends React.Component {
 // };
 
 // 2.
-// const Text = () => {
-//   const [hide, setHide] = useState(true);
+const Text = () => {
+  const [hide, setHide] = useState(true);
 
-//   const hideText = () => {
-//     setHide(!hide);
-//   };
+  const hideText = () => {
+    setHide(!hide);
+  };
 
-//   return (
-//     <>
-//       <button onClick={hideText}>Hide me!</button>
-//       {hide && <p>Something ....</p>}
-//     </>
-//   );
-// };
+  return (
+    <>
+      <button onClick={hideText}>Hide me!</button>
+      {hide && <p>Something ....</p>}
+    </>
+  );
+};
 
 // 1
 // const Example = () => {
